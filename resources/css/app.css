@@ -10,6 +10,145 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-.title {
-    text-transform: uppercase;
+:root {
+    --primary-color: #0a4740;
+    --secondary-color: #d4af37;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.border-primary {
+    border-color: var(--primary-color);
+}
+
+.border-secondary {
+    border-color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #083830;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #c09f2a;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.car-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-triangles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.triangle-top {
+    margin-bottom: -10px;
+    border-width: 0 15px 25px 15px;
+    border-color: transparent transparent var(--secondary-color) transparent;
+}
+
+.triangle-left {
+    border-width: 25px 15px 0 15px;
+    border-color: var(--secondary-color) transparent transparent transparent;
+    margin-right: 5px;
+}
+
+.triangle-right {
+    border-width: 25px 15px 0 15px;
+    border-color: var(--secondary-color) transparent transparent transparent;
+    margin-left: 5px;
+}
+
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.03);
+}
+
+/* For Alpine.js page navigation */
+[x-cloak] {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
