@@ -6,6 +6,11 @@ const navigations = [
     {name: "Contacte", href: "/contact"}
 ]
 export default function Layout({children}) {
+    const [isOpen, setIsOpen] = useState(false)
+    const [activePage, setActivePage] = useState("/")
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    }
   return (
     <>
         <header class="bg-primary text-white shadow-md">
