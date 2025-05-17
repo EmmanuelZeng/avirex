@@ -1,4 +1,11 @@
 export default function Layout({children}) {
+    const navigations = [
+        {name: "Accueil", href: "/"},
+        {name: "Véhicules", href:"/cars"},
+        {name: "Services", href: "/services"},
+        {name: "A propos", href: "/about"},
+        {name: "Contacte", href: "/contact"}
+    ]
   return (
     <>
         <header class="bg-primary text-white shadow-md">
