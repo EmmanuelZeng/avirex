@@ -1,16 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 Route::get('/', function () {
-    return inertia('Home');
+    return Inertia::render('Home');
 });
 Route::get('/about', function() {
-    return inertia('About');
+    return Inertia::render('About');
 });
 Route::get('/cars', function() {
-    return inertia('Cars');
+    return Inertia::render('Cars');
 });
 Route::get('/contact', function() {
-    return inertia('Contact');
+    return Inertia::render('Contact');
 });
