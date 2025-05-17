@@ -9,7 +9,7 @@ Route::get('/', function () {
 Route::get('/cars', function() {
     return Inertia::render('Cars');
 });
-Router::get('/services', function(){
+Route::get('/services', function(){
     return Inertia::render('Service');
 });
 Route::get('/about', function() {
