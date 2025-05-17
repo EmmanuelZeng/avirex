@@ -85,13 +85,13 @@ export default function Layout({ children }) {
                 
                 {/* Navigation mobile (full screen) */}
                 {isOpen && (
-                    <div className="md:hidden fixed inset-0 bg-primary z-40 mt-16 overflow-y-auto">
-                        <nav className="flex flex-col items-start justify-center h-full space-y-8">
+                    <div className="md:hidden fixed inset-0 bg-primary mx-auto px-4 z-40 mt-16 overflow-y-auto">
+                        <nav className="flex flex-col items-start pt-8 h-full space-y-8">
                             {navigations.map((item) => (
                                 <Link 
                                     key={item.name} 
                                     href={item.href} 
-                                    className={`text-2xl px-4 py-2 font-medium ${
+                                    className={`text-xl px-4 font-medium ${
                                         activePage === item.href ? "text-secondary font-bold" : "hover:text-secondary"
                                     }`}
                                     onClick={() => {
