@@ -1,6 +1,13 @@
 import { Link } from '@inertiajs/react'
 import React from 'react'
 
+const navigations = [
+    {name:"Accueil", href:"/"},
+    {name:"Véhicules", href:"/cars"},
+    {name:"Services", href:"/services"},
+    {name:"A propos", href:"/about"},
+    {name:"Conctat", href:"/contact"}
+]
 export default function Footer() {
   return (
     <>
