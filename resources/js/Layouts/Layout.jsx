@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from "@inertiajs/react";
+import Footer from "./Footer";
 
 const navigations = [
     {name: "Accueil", href: "/"},
@@ -111,6 +112,8 @@ export default function Layout({ children }) {
             <main className="pt-20 md:pt-20">
                 {children}
             </main>
+
+            <Footer />
         </>
     );
 }
