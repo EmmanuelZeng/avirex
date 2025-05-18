@@ -6,7 +6,7 @@ const navigations = [
     {name:"Véhicules", href:"/cars"},
     {name:"Services", href:"/services"},
     {name:"A propos", href:"/about"},
-    {name:"Conctat", href:"/contact"}
+    {name:"Contact", href:"/contact"}
 ]
 export default function Footer() {
   return (
@@ -46,32 +46,16 @@ export default function Footer() {
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-white mb-4">Liens Rapides</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <button class="text-white/70 hover:text-secondary transition">
-                                Accueil
-                            </button>
-                        </li>
-                        <li>
-                            <button class="text-white/70 hover:text-secondary transition">
-                                Véhicules
-                            </button>
-                        </li>
-                        <li>
-                            <button class="text-white/70 hover:text-secondary transition">
-                                Services
-                            </button>
-                        </li>
-                        <li>
-                            <button class="text-white/70 hover:text-secondary transition">
-                                À propos
-                            </button>
-                        </li>
-                        <li>
-                            <button class="text-white/70 hover:text-secondary transition">
-                                Contact
-                            </button>
-                        </li>
+                    <ul class="space-y-2 flex flex-col">
+                        {navigations.map((item) => (
+                            <Link 
+                                key={item.name} 
+                                href={item.href} 
+                                className="text-white/70 hover:text-secondary transition"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
                     </ul>
                 </div>
                 <div>
