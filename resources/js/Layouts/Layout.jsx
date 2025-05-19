@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from "@inertiajs/react";
 import Footer from "./Footer";
+import BTTbutton from '../components/BTT-button';
 
 const navigations = [
     {name: "Accueil", href: "/"},
@@ -114,6 +115,7 @@ export default function Layout({ children }) {
             </main>
 
             <Footer />
+            <BTTbutton />
         </>
     );
 }
