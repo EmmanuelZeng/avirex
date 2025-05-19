@@ -203,6 +203,23 @@ export default function Home() {
                     </div>
                 </div>
         </div>
+        {/* Call To Action */}
+        <div class="bg-primary py-16">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-6">Prêt à trouver votre véhicule de rêve?</h2>
+                    <p class="text-white text-xl mb-8 max-w-2xl mx-auto">
+                        Contactez-nous dès aujourd'hui et laissez-nous vous guider vers le véhicule qui correspond parfaitement à vos attentes.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <Link href="/contact" class="btn-secondary px-8 py-3 rounded-md font-bold">
+                            Nous contacter
+                        </Link>
+                        <Link href="/cars" class="bg-white text-primary px-8 py-3 rounded-md font-bold">
+                            Voir nos véhicules
+                        </Link>
+                    </div>
+                </div>
+        </div>
       </section>
     </>
   )
