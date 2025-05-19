@@ -1,4 +1,5 @@
 import { Link } from "@inertiajs/react";
+import Car from "../components/Car";
 
 export default function Home() {
   return (
@@ -30,27 +31,7 @@ export default function Home() {
             </p>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
-              <div class="h-56 bg-gray-200"></div>
-              <div class="p-6">
-                <div class="flex justify-between items-center mb-4">
-                  <h3 class="text-xl font-bold text-primary">BMW M2</h3>
-                  <p class="text-secondary font-bold">€89,900</p>
-                </div>
-                <p class="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius.
-                </p>
-                <div class="flex justify-between text-sm text-gray-500 mb-4">
-                  <span>2023</span>
-                  <span>305 kW</span>
-                  <span>Essence</span>
-                  <span>3000 km</span>
-                </div>
-                <button class="w-full bg-secondary text-primary py-2 rounded font-medium hover:bg-opacity-90 transition">
-                  Voir les détails
-                </button>
-              </div>
-            </div>
+            <Car />
             <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
               <div class="h-56 bg-gray-200"></div>
               <div class="p-6">
@@ -99,7 +80,54 @@ export default function Home() {
                 Voir tous les véhicules
               </Link>
             </div>
-          </div>
+        </div>
+        {/* Services Overview */}
+        <div class="bg-gray-100 py-16">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-4">Nos Services</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            Découvrez la gamme complète des services que nous offrons pour répondre à tous vos besoins automobiles.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-car text-secondary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary text-center mb-3">Vente de Véhicules</h3>
+                            <p class="text-gray-600 text-center">
+                                Large gamme de véhicules neufs et d'occasion pour répondre à tous vos besoins et préférences.
+                            </p>
+                        </div>
+                        <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-tools text-secondary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary text-center mb-3">Maintenance & Réparation</h3>
+                            <p class="text-gray-600 text-center">
+                                Service complet de maintenance et de réparation par nos techniciens certifiés.
+                            </p>
+                        </div>
+                        <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-coins text-secondary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary text-center mb-3">Financement</h3>
+                            <p class="text-gray-600 text-center">
+                                Solutions de financement personnalisées pour vous aider à acquérir le véhicule de vos rêves.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-10">
+                        <Link href="/services" class="btn-primary px-8 py-3 rounded-md font-bold inline-block">
+                            Découvrir tous nos services
+                        </Link>
+                    </div>
+                </div>
+        </div>
       </section>
     </>
   )
