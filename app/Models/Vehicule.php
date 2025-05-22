@@ -6,6 +6,7 @@ use App\Models\Modele;
 use App\Models\TypeVehicule;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Vehicule extends Model
 {
@@ -36,5 +37,10 @@ class Vehicule extends Model
     public function type(): BelongsTo
     {
         return $this->belongsTo(TypeVehicule::class);
+    }
+
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(Review::class);
     }
 }
