@@ -13,7 +13,7 @@ class Vehicule extends Model
     protected $fillable = [
         'modele_id',
         'type_id',
-        'manifacture_year', //Année de fabrication
+        'manufacture_year', //Année de fabrication
         'mileage', //Kilométrage
         'price', // prix
         'type_carburant', //Type carburant
