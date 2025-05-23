@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('vehicules', function (Blueprint $table) {
             $table->id();
             $table->foreignId('modele_id')->constrained()->onDelete('cascade');
-            $table->foreignId('type_id')->constrained()->onDelete('cascade');
+            $table->foreignId('type_vehicules_id')->constrained()->onDelete('cascade');
             $table->integer('manufacture_year');
             $table->integer('price');
             $table->string('type_carburant');
