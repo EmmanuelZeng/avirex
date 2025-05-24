@@ -4,9 +4,10 @@ namespace App\Models;
 
 use App\Models\Modele;
 use App\Models\TypeVehicule;
+use App\Models\VehiculeImage;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Vehicule extends Model
 {
@@ -29,12 +30,22 @@ class Vehicule extends Model
         'availability', //disponiblité
     ];
 
+    protected $casts = [
+        'climatisation' => 'boolean', //Climatisation
+        'gps' => 'boolean', //GPS
+        'sieges_cuir' => 'boolean', //Sièges en cuir
+        'sieges_chaufants' => 'boolean', //Sièges chauffants
+        'toit_ouvrant' => 'boolean',
+        'bluetooth' => 'boolean',
+        'camera_recul' => 'boolean',
+    ];
+
     public function modele(): BelongsTo
     {
         return $this->belongsTo(Modele::class);
     }
 
-    public function type(): BelongsTo
+    public function typeVehicule(): BelongsTo
     {
         return $this->belongsTo(TypeVehicule::class);
     }
@@ -42,5 +53,10 @@ class Vehicule extends Model
     public function reviews(): HasMany
     {
         return $this->hasMany(Review::class);
+    }
+
+    public function photos(): HasMany
+    {
+        return $this->hasMany(VehiculeImage::class);
     }
 }
