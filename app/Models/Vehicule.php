@@ -28,6 +28,17 @@ class Vehicule extends Model
         'bluetooth',
         'camera_recul',
         'availability', //disponiblité
+        'engine_power',
+        'engine_cc',
+        'acceleration',
+        'max_speed',
+        'consumption_urban',
+        'co2_emissions',
+        'fuel_tank_volume',
+        'longueur',
+        'weight',
+        'trunk_volume',
+        'drivetrain',
     ];
 
     protected $casts = [
