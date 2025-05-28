@@ -70,13 +70,17 @@ class VehiculeResource extends Resource
                         ->options([
                             'diesel'   => 'Dièsel',
                             'essence'  => 'Essence',
+                            'electric'  => 'Electrique',
+                            'hybrid'  => 'Hybride',
                         ])
                         ->required(),
 
                     TextInput::make('transmission')
                         ->label('Transmission')
                         ->required(),
-
+                    TextInput::make('color')
+                        ->label('Couleur de la voiture')
+                        ->required(),
                     /* Description sur 2 colonnes */
                     MarkdownEditor::make('description')
                         ->label('Description de la voiture')
@@ -96,6 +100,43 @@ class VehiculeResource extends Resource
                             Toggle::make('toit_ouvrant')->label('Toit ouvrant'),
                             Toggle::make('bluetooth')->label('Bluetooth'),
                             Toggle::make('camera_recul')->label('Caméra de recul'),
+                        ]),
+                ])
+                ->collapsible(),   // optionnel : section repliable
+            Section::make('Caractéristiques Tecniques')
+                ->schema([
+                    Grid::make(3)
+                        ->schema([
+                            TextInput::make('engine_power')
+                                    ->label('Puissance')
+                                    ->required(),
+                            TextInput::make('engine_cc')
+                                    ->label('Moteur')
+                                    ->required(),
+                            TextInput::make('acceleration')
+                                    ->label('Accélération de 0-100 km/h')
+                                    ->required(),
+                            TextInput::make('max_speed')
+                                    ->label('Vitesse maximale')
+                                    ->required(),
+                            TextInput::make('consumption_urban')
+                                    ->label('Consommation mixte')
+                                    ->required(),
+                            TextInput::make('co2_emissions')
+                                    ->label('Emission CO2'),
+                            TextInput::make('fuel_tank_volume')
+                                    ->label('Capacité réservoir')
+                                    ->required(),
+                            TextInput::make('longueur')
+                                    ->label('Longueur du véhicule'),
+                            TextInput::make('weight')
+                                    ->label('Poids du véhicule')
+                                    ->required(),
+                            TextInput::make('trunk_volume')
+                                    ->label('Volume coffre'),
+                            TextInput::make('drivetrain')
+                                    ->label('Type de traction')
+                                    ->required(),
                         ]),
                 ])
                 ->collapsible(),   // optionnel : section repliable
