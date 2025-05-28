@@ -28,6 +28,17 @@ return new class extends Migration
             $table->boolean('bluetooth')->default(false);
             $table->boolean('camera_recul')->default(false);
             $table->enum('availability', ['available', 'reserved', 'sold']);
+            $table->string('engine_power')->nullable();
+            $table->string('engine_cc')->nullable();
+            $table->string('acceleration')->nullable();
+            $table->string('max_speed')->nullable();
+            $table->string('consumption_urban')->nullable();
+            $table->string('co2_emissions')->nullable();
+            $table->string('fuel_tank_volume')->nullable();
+            $table->string('longueur')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('trunk_volume')->nullable();
+            $table->string('drivetrain')->nullable();
             $table->timestamps();
         });
     }
